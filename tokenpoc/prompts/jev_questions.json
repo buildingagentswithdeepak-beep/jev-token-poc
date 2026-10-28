@@ -1,0 +1,32 @@
+{
+  "q_intent": {
+    "type": "choice",
+    "instructions": "Which support category best describes this ticket?",
+    "criteria": {
+      "PASSWORD_RESET": "Login, credential, or account-access problems resolvable by a password reset flow (forgotten password, locked out, reset email missing, lost 2FA device).",
+      "ORDER_STATUS": "Where-is-my-order, shipping, tracking, or delivery status questions about a placed order.",
+      "BILLING_DISPUTE": "Wrong, duplicate, or unrecognized charges; refund amount disagreements; billing errors after plan changes.",
+      "BUG_REPORT": "Product malfunction: errors, crashes, broken or misbehaving features.",
+      "CANCELLATION": "Requests to cancel a subscription, account, or order, including conditional cancellation threats.",
+      "GENERAL_INQUIRY": "How-do-I questions, feature questions, and anything not matching the other categories."
+    }
+  },
+  "q_priority": {
+    "type": "score",
+    "instructions": "How urgent is this ticket? LOW: routine questions and password resets. MEDIUM: functional or order issues for FREE/PRO tiers. HIGH: money at stake, cancellation threats, or ENTERPRISE functional issues. URGENT: service-blocking ENTERPRISE issues, security incidents, or explicit urgency with money at stake.",
+    "criteria": ["LOW", "MEDIUM", "HIGH", "URGENT"]
+  },
+  "q_escalate": {
+    "type": "noul",
+    "instructions": "Should this ticket be escalated to a human agent queue? Escalate billing disputes, cancellations, security issues, urgent service-blocking problems, and enterprise-tier bug reports."
+  },
+  "q_strategy": {
+    "type": "choice",
+    "instructions": "Which response strategy should handle this ticket?",
+    "criteria": {
+      "TEMPLATE_REPLY": "Routine ticket fully answerable by a predefined canned response (password resets, simple how-do-I questions, standard bug acknowledgements).",
+      "AUTO_RESOLVE": "Order-status question answerable by looking up order data and filling a template.",
+      "CUSTOM_REPLY": "Needs a generated, situation-specific reply: billing disputes, nuanced complaints, cancellations needing persuasion, ambiguous or multi-issue tickets."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.venv/
+*.egg-info/
+.vscode/
+__pycache__/
+*.pyc
+.env
+results/
+.pytest_cache/
+.copilot-runtime/
+.copilot-empty/

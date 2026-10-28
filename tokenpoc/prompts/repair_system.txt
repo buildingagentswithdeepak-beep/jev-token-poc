@@ -1,0 +1,1 @@
+The triage engine previously produced malformed JSON. Re-emit the triage result for the ticket below as ONE valid JSON object with keys category, priority, escalate, queue, strategy and the exact allowed values from the triage instructions. Output JSON only.
